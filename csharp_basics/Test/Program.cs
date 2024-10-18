@@ -1,10 +1,29 @@
-﻿// Los arreglos permiten definir una variable multidimensional
-int[] array = { 2, 4, 5, 6 };
+﻿// Las clases permiten encapsular la logica (propiedades y metodos) de un objeto
+class Program
+{
+    // Propiedades de la clase
+    public int vida;
+    public float ataque;
+    public string nombre;
 
-// Generalmente los arraglos pueden ser recorridos mediante el ciclo for
-for (int i = 0; i < array.Length; i++) {
-    Console.WriteLine(array[i]); // Cada elemento del arreglo es accedido mediante su indice, el cual inicia desde
+    // El metodo constructor se ejecuta cada vez que se instancia un nuevo objeto de la clase
+    public Program()
+    {
+        vida = 0;
+        ataque = 0;
+        nombre = "Unknown";
+    }
+
+    static void Main(string[] args)
+    {
+        // Instanciando un nuevo objeto de la clase
+        Program personaje = new Program();
+
+        // Desde la instancia se asginan valores a las propiedades de la clase
+        personaje.vida = 100;
+        personaje.ataque = 11.2f;
+        personaje.nombre = "Kasper";
+
+        Console.WriteLine($"Nombre: {personaje.nombre}, Vida: {personaje.vida}, Ataque: {personaje.ataque}");
+    }
 }
-
-// Los elementos de un arreglo tambien pueden ser accedidos desde fuera de un ciclo
-Console.WriteLine(array[1]); // Se accede al elemento ubicado en la posicion 1
