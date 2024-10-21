@@ -26,6 +26,8 @@ Muestra las instancias de la escena actual
 
 Muestra informacion detallada de los GameObjects
 
+- **Tag**: Permite definir una etiqueta con la que se pueda identificar el GameObject.
+
 #### Escena
 
 Representacion visual del juego
@@ -51,7 +53,7 @@ Representa la vista del juego desde la perspectiva del usuario
 
 ### Pixels per unit
 
-Unidad de medida utilizada en Unity, por defecto el tamaño de cada cuadrado en la escena es del 100 pixeles. 
+Unidad de medida utilizada en Unity, por defecto el tamaño de cada cuadrado en la escena es del 100 pixeles.
 
 ## Sprites
 
@@ -88,7 +90,7 @@ Componente que permite visualizar los GameObject en la escena.
 - Draw mode: La opcion `Tiled` permite que una sprite se ubique en una cuadricula.
     - Size: Tamaño del sprite repetido en la escena.
 
-## Delta time
+## Time.deltaTime
 
 Valor que indica el tiempo que ha pasado desde el frame anterior. Se puede acceder en el codigo al Delta time mediante `Time.deltaTime`
 
@@ -111,6 +113,10 @@ Dependiendo de la forma del objeto se puede definir un collider especifico.
 - BoxCollider
 - CircleCollider
 - CapsuleCollider
+
+La opcion `isTrigger` permite detectar la colision de un GameObject sin ser este un objeto solido (Usualmente utilizado para la deteccion de colisiones en ciertas partes de un GameObject principal).
+
+La deteccion de eventos de los objetos marcados con la opcion `isTrigger` se realiza mediante `onTrigger<event>`, donde `<event>` puede ser Enter, Stay o Exit.
 
 ##### Material fisico
 
